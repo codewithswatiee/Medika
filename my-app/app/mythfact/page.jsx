@@ -1,54 +1,31 @@
-'use client'
-
+"use client";
 import React, { useState } from 'react'
 import { Search, ChevronLeft } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const mythsAndFacts = [
   {
-    myth: "Eating carrots improves your eyesight.",
-    fact: "While carrots contain vitamin A, which is essential for eye health, they won't improve eyesight significantly."
+    myth: "Cold weather causes colds.",
+    fact: "Colds are caused by viruses, not by cold temperatures.",
+    image: "/1.jpg"  // Replace with actual image path
   },
   {
-    myth: "You should drink at least 8 glasses of water a day.",
-    fact: "Water needs vary by individual; thirst is a good indicator of when to drink."
+    myth: "Antibiotics can cure colds and flu.",
+    fact: "Colds and flu are viral infections, so antibiotics, which target bacteria, are ineffective.",
+    image: "/2.jpg.webp"  // Replace with actual image path
   },
   {
-    myth: "You can catch a cold from being cold.",
-    fact: "Colds are caused by viruses, not by exposure to cold weather."
+    myth: "Vaccines can cause the disease they're meant to prevent.",
+    fact: "Vaccines contain inactive or weakened virus strains, making it extremely rare for them to cause illness.",
+    image: "/3.jpeg"  // Replace with actual image path
   },
-  {
-    myth: "Natural sugars are better than refined sugars.",
-    fact: "All sugars can contribute to health issues if consumed in excess; moderation is key."
-  },
-  {
-    myth: "Vitamins can replace a healthy diet.",
-    fact: "Vitamins are supplements, not substitutes for a balanced diet; whole foods provide essential nutrients."
-  },
-  {
-    myth: "Cracking your knuckles causes arthritis.",
-    fact: "There's no scientific evidence that cracking knuckles leads to arthritis, though it may weaken grip strength over time."
-  },
-  {
-    myth: "You need to wait 24 hours before reporting a missing person.",
-    fact: "This is a common myth in TV shows. In reality, you should report a missing person immediately if you're concerned."
-  },
-  {
-    myth: "You only use 10% of your brain.",
-    fact: "This is a popular myth, but in reality, we use most of our brain most of the time, even when sleeping."
-  },
-  {
-    myth: "Sugar makes children hyperactive.",
-    fact: "Scientific studies have not found evidence that sugar causes hyperactivity in children."
-  },
-  {
-    myth: "Reading in dim light damages your eyes.",
-    fact: "Reading in low light doesn't damage your eyes, but it can cause eye strain and temporary discomfort."
-  }
+  // Add more myths as needed
 ]
 
-const MythFactCard = ({ myth, fact }) => (
+const MythFactCard = ({ myth, fact, image }) => (
   <div className="bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+    <Image src={image} alt={myth} width={400} height={200} className="rounded-lg mb-4"/>
     <h3 className="text-lg font-semibold text-white mb-2">Myth: {myth}</h3>
     <p className="text-gray-300">Fact: {fact}</p>
   </div>
@@ -75,7 +52,7 @@ export default function HealthMythsAndFacts() {
 
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-center mb-8">
-          Health Myths vs. Facts
+          Medical Myths vs. Facts
         </h1>
 
         <div className="relative mb-6">
@@ -91,7 +68,7 @@ export default function HealthMythsAndFacts() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredMythsAndFacts.map((item, index) => (
-            <MythFactCard key={index} myth={item.myth} fact={item.fact} />
+            <MythFactCard key={index} myth={item.myth} fact={item.fact} image={item.image} />
           ))}
         </div>
 
