@@ -1,13 +1,27 @@
 {
-  "name": "medika",
-  "version": "1.0.0",
+  "name": "my-app",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cd my-app && npm run dev",
-    "build": "cd my-app && npm run build",
-    "start": "cd my-app && npm run start",
-    "lint": "cd my-app && npm run lint",
-    "install": "cd my-app && npm install"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "workspaces": ["my-app"]
+  "dependencies": {
+    "framer-motion": "^11.11.8",
+    "lucide-react": "^0.453.0",
+    "next": "14.2.15",
+    "next-video": "^1.2.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.3.0",
+    "recharts": "^2.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.15",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
 }
