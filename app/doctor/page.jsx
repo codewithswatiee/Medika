@@ -234,7 +234,7 @@ export default function DoctorDashboard() {
           {/* Appointment Management Section */}
           <div className="md:col-span-2 bg-gray-900 rounded-lg p-6 border border-gray-800">
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-2xl font-semibold text-white">Today's Appointments</h2>
+              <h2 className="text-2xl font-semibold text-white">Today&apos;s Appointments</h2>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

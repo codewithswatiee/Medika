@@ -119,7 +119,7 @@ export default function LandingPage() {
                   Medika is a revolutionary platform designed to transform the way students manage their health on campus. Born from the vision of combining ancient wisdom with modern technology, our application brings the power of Olympus to your fingertips.
                 </p>
                 <p className="text-lg mb-4">
-                  We understand the challenges students face in balancing their academic life with their health needs. That's why we've created a seamless, intuitive system that makes scheduling appointments, tracking health metrics, and managing your overall wellness as easy as a bolt of lightning.
+                  We understand the challenges students face in balancing their academic life with their health needs. That&apos;s why we&apos;ve created a seamless, intuitive system that makes scheduling appointments, tracking health metrics, and managing your overall wellness as easy as a bolt of lightning.
                 </p>
                 <p className="text-lg">
                   Join us in our mission to elevate student healthcare to divine heights. With Medika, your well-being is in the hands of the gods.
@@ -185,7 +185,7 @@ export default function LandingPage() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <h3 className="text-lg font-semibold mb-2">{testimonial.name} - {testimonial.role}</h3>
-                  <p className="italic">"{testimonial.quote}"</p>
+                  <p className="italic">&quot;{testimonial.quote}&quot;</p>
                 </motion.div>
               ))}
             </div>
